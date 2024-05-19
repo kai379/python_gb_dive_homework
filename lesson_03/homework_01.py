@@ -1,3 +1,4 @@
+# https://autotest.gb.ru/problems/95?lesson_id=433070
 # На вход подается словарь со списком вещей для похода в качестве ключа и их массой max_weight в
 # качестве значения.
 # Определите какие вещи влезут в рюкзак backpack передав его максимальную грузоподъёмность.
@@ -39,13 +40,13 @@ def test(items, max_weight, backpack):
 
 # Мой код
 def prog(items, max_weight):
+    """ Не дорабатывал """
     # Делаю резервную копию items в save_items
     save_items = {}
     for i in items:
         save_items[i] = items[i]
     # Выполняю свой код
     backpack = {}
-    min_arg = min(items[i] for i in items)
     while items and max_weight >= min(items[i] for i in items):
         for key in items:
             if key not in backpack and items[key] <= max_weight:
@@ -74,19 +75,19 @@ def prog(items, max_weight):
 
 
 # 2
-items = {
-    "ноутбук": 2.0,
-    "книги": 1.5,
-    "зарядное устройство": 0.5,
-    "бутерброды": 0.3,
-    "вода": 1.0
-}
-max_weight = 5.0
-
-backpack = prog(items, max_weight)
-max_weight = 5.0
-
-test(items, max_weight, backpack)
+# items = {
+#     "ноутбук": 2.0,
+#     "книги": 1.5,
+#     "зарядное устройство": 0.5,
+#     "бутерброды": 0.3,
+#     "вода": 1.0
+# }
+# max_weight = 5.0
+#
+# backpack = prog(items, max_weight)
+# max_weight = 5.0
+#
+# test(items, max_weight, backpack)
 
 # # 3
 # items = {
@@ -101,6 +102,7 @@ test(items, max_weight, backpack)
 # test(items, max_weight, backpack)
 #
 #
+# # 4
 # items = {
 #     "спальник": 1.0,
 #     "палатка": 2.0,
@@ -114,3 +116,6 @@ test(items, max_weight, backpack)
 #     "нож": 0.2
 # }
 # max_weight = 10.0
+#
+# backpack = prog(items, max_weight)
+# test(items, max_weight, backpack)
