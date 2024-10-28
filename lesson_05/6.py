@@ -8,3 +8,20 @@
 ✔ Для вывода результата используйте «принт»
 без перехода на новую строку.
 """
+
+
+def func(data):
+    count = 0
+    for elem in data:
+        print(elem, end='\t\t')
+        count += 1
+        if count % 4 == 0:
+            print()
+    print()
+
+
+g_1 = (f'{j} * {i} = {j * i}' for i in range(2, 11) for j in range(2, 6))
+g_2 = (f'{j} * {i} = {j * i}' for i in range(2, 11) for j in range(6, 10))
+
+func(g_1)
+func(g_2)
