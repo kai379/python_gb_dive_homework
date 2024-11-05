@@ -38,4 +38,4 @@ def merger_files(new_file, numbers_file, names_file):
 
 
 if __name__ == '__main__':
-    merger_files('merge_name_num.txt', 'random_int_float.txt', 'nickname.txt')
+    merger_files('../lesson_08/merge_name_num.txt', 'random_int_float.txt', 'nickname.txt')
